@@ -124,7 +124,7 @@ graph TD
 ```
 ## 6. Sequence-диаграммы
 ### a. Создание нового AI-сервиса
-```
+```mermaid
 sequenceDiagram
     participant User
     participant UI
