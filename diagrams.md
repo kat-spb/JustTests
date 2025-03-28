@@ -185,10 +185,10 @@ graph TD
 **ER-модель сущностей платформы.**
 ```mermaid
 erDiagram
-    AISERVICE ||--o{ MODEL : включает
-    AISERVICE ||--o{ PIPELINE : использует
-    MODEL ||--o{ DATASET : обучается на
-    PIPELINE ||--o{ MODEL : состоит из
+    AISERVICE ||--o{ MODEL : includes
+    AISERVICE ||--o{ PIPELINE : used
+    MODEL ||--o{ DATASET : training on
+    PIPELINE ||--o{ MODEL : consists of
 
     AISERVICE {
         string id
