@@ -187,8 +187,8 @@ graph TD
 erDiagram
     AISERVICE ||--o{ MODEL : includes
     AISERVICE ||--o{ PIPELINE : used
-    MODEL ||--o{ DATASET : training on
-    PIPELINE ||--o{ MODEL : consists of
+    MODEL ||--o{ DATASET : training\ on
+    PIPELINE ||--o{ MODEL : consists\ of
 
     AISERVICE {
         string id
