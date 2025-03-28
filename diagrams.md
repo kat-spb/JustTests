@@ -159,10 +159,10 @@ sequenceDiagram
 **Роли, шифрование и аудит.**
 ```mermaid
 graph TD
-    IAM[Управление доступом (IAM)]
-    Admin[Админ]
-    Dev[Разработчик]
-    User[Конечный пользователь]
+    IAM\[Управление доступом \(IAM\)\]
+    Admin\[Админ\]
+    Dev\[Разработчик\]
+    User\[Конечный пользователь\]
 
     Encryption[Шифрование]
     Transit[In Transit]
