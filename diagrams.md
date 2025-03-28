@@ -159,16 +159,16 @@ sequenceDiagram
 **Роли, шифрование и аудит.**
 ```mermaid
 graph TD
-    IAM\[Управление доступом \(IAM\)\]
-    Admin\[Админ\]
-    Dev\[Разработчик\]
-    User\[Конечный пользователь\]
+    IAM[IAM]
+    Admin[Admin]
+    Dev [Developer]
+    User[User]
 
-    Encryption[Шифрование]
-    Transit[In Transit]
-    AtRest[At Rest]
+    Encryption[Encription]
+    Transit[In_Transit]
+    AtRest[At_Rest]
 
-    Audit[Аудит доступа]
+    Audit[IAM_audit]
 
     IAM --> Admin
     IAM --> Dev
@@ -177,7 +177,7 @@ graph TD
     Encryption --> Transit
     Encryption --> AtRest
 
-    Security[Безопасность] --> IAM
+    Security[Security] --> IAM
     Security --> Encryption
     Security --> Audit
 ```
@@ -187,8 +187,8 @@ graph TD
 erDiagram
     AISERVICE ||--o{ MODEL : includes
     AISERVICE ||--o{ PIPELINE : used
-    MODEL ||--o{ DATASET : training\ on
-    PIPELINE ||--o{ MODEL : consists\ of
+    MODEL ||--o{ DATASET : training_on
+    PIPELINE ||--o{ MODEL : consists_of
 
     AISERVICE {
         string id
