@@ -161,7 +161,7 @@ sequenceDiagram
 graph TD
     IAM[IAM]
     Admin[Admin]
-    Dev [Developer]
+    Dev[Developer]
     User[User]
 
     Encryption[Encription]
