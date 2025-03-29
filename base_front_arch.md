@@ -3,7 +3,7 @@
 ## 🧭 TOGAF – Контекст архитектуры
 
 ```mermaid
-graph TD
+flowchart TD
     user[User]
     fastapi[FastAPI API]
     docker_host[Docker Host]
@@ -17,7 +17,6 @@ graph TD
     repo --> ci_cd
     ci_cd --> docker_host
     docker_host --> browser
-```
 
 ---
 
