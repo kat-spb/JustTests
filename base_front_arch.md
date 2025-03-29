@@ -4,12 +4,12 @@
 
 ```mermaid
 flowchart TD
-    user[User]
-    fastapi[FastAPI API]
-    docker_host[Docker Host]
-    ci_cd[GitLab CI/CD]
-    browser[Browser (Test Server)]
-    repo[Git Repository]
+    user([User])
+    fastapi([FastAPI API])
+    docker_host([Docker Host])
+    repo([Git Repository])
+    ci_cd([GitLab CI/CD])
+    browser([Browser - Test Server])
 
     user --> fastapi
     fastapi --> docker_host
@@ -57,7 +57,7 @@ graph TD
 ```mermaid
 graph TD
     start([Start]) --> gen[Generate Angular Project]
-    gen --> cust[Customize App (Hello World)]
+    gen --> cust[Customize App With Hello World]
     cust --> build[NPM Install + Build]
     build --> docker[Build Docker Image]
     docker --> test[Test App]
