@@ -17,13 +17,14 @@ flowchart TD
     repo --> ci_cd
     ci_cd --> docker_host
     docker_host --> browser
+```
 
 ---
 
 ## 🏗 ODA – Структурная архитектура приложения
 
 ```mermaid
-graph TD
+flowchart TD
     subgraph Application
         A1[Angular CLI Project Generator]
         A2[Custom Angular Base App]
@@ -55,10 +56,10 @@ graph TD
 ## 🔄 BPMN – Процесс создания, сборки и деплоя
 
 ```mermaid
-graph TD
+flowchart TD
     start([Start]) --> gen[Generate Angular Project]
-    gen --> cust[Customize App With Hello World]
-    cust --> build[NPM Install + Build]
+    gen --> cust[Customize App with Hello World]
+    cust --> build[NPM Install and Build]
     build --> docker[Build Docker Image]
     docker --> test[Test App]
     test --> deploy[Deploy with GitLab CI]
