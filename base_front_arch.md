@@ -57,11 +57,12 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    start([Start]) --> gen[Generate Angular Project]
+    start_node([Start]) --> gen[Generate Angular Project]
     gen --> cust[Customize App with Hello World]
     cust --> build[NPM Install and Build]
     build --> docker[Build Docker Image]
     docker --> test[Test App]
     test --> deploy[Deploy with GitLab CI]
-    deploy --> end([End])
+    deploy --> end_node([End])
 ```
+
