@@ -6,6 +6,23 @@
 
 ```mermaid
 flowchart TD
+  input[📥 Input - uploads / API / user] --> filter[🔍 Filter - selector]
+  filter --> q1[🎯 Цель]
+  q1 --> q2[📚 Задача]
+  q2 --> q3[🔁 Сравнение]
+  q3 --> q4[✅ Критерий]
+  q4 --> selector[🧩 Selector - template or project]
+  selector --> kb[🧠 Knowledge Base - template]
+  kb --> test[🧪 Validate and Test]
+  test --> generator[⚙️ Generator - builder]
+  generator --> workspace[📂 Workspace - runtime]
+  generator --> storage[🗄 Storage - permanent]
+  generator --> bus[🔔 Bus - events]
+  workspace --> ci[🚀 CI or CD]
+  ci --> monitor[📊 Monitoring]
+  ci --> downloads[📤 Output - download or git]
+```
+flowchart TD
   input[📥 Input (uploads, API, user)] --> filter[🔍 Filter / Selector]
   filter --> q1{🎯 Цель?}
   q1 --> q2{📚 Задача?}
