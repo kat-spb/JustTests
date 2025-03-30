@@ -4,8 +4,8 @@
 ## 1. Business Process Flow (BPMN)
 ```mermaid
 flowchart TD
-    A[Пользователь формулирует задачу] --> B[Платформа генерирует template_query/prompt]
-    B --> C[Подбор шаблона / генерация template]
+    A["Пользователь формулирует задачу"] --> B["Платформа генерирует template_query/prompt"]
+    B --> C["Подбор шаблона / генерация template"]
     C --> D[Валидация входных данных / структуры]
     D --> E[Генерация решения project / pipeline]
     E --> F[Тестирование и проверка]
