@@ -30,14 +30,14 @@ graph TD
 ## 3. Data Entity Model (ER)
 ```mermaid
 erDiagram
-    ITEM ||--o{ ARTIFACT : 'содержит'
-    ITEM ||--|| TYPE : 'имеет'
-    ITEM ||--|| OBJECT : 'принадлежит'
-    ITEM ||--o| ITEM : 'ссылается generator'
-    ITEM ||--o| SCHEMA : 'проверяется по'
-    TEMPLATE ||--|| ITEM : 'является ITEM'
-    PROJECT ||--|| ITEM : 'является ITEM'
-    SCRIPT ||--|| ITEM : 'является ITEM'
+    ITEM ||--o{ ARTIFACT : [содержит]
+    ITEM ||--|| TYPE : [имеет]
+    ITEM ||--|| OBJECT : [принадлежит]
+    ITEM ||--o| ITEM : [ссылается generator]
+    ITEM ||--o| SCHEMA : [проверяется по]
+    TEMPLATE ||--|| ITEM : [является ITEM]
+    PROJECT ||--|| ITEM : [является ITEM]
+    SCRIPT ||--|| ITEM : [является ITEM]
 ```
 
 ## 4. Data Flow Platform (DFD)
