@@ -7,7 +7,7 @@ flowchart TD
     A[Пользователь формулирует задачу] --> B[Платформа генерирует template_query/prompt]
     B --> C[Подбор шаблона / генерация template]
     C --> D[Валидация входных данных / структуры]
-    D --> E[Генерация решения (project / pipeline)]
+    D --> E[Генерация решения project / pipeline]
     E --> F[Тестирование и проверка]
     F --> G[Документирование и визуализация]
     G --> H[Развёртывание / экспорт / публикация]
@@ -30,14 +30,14 @@ graph TD
 ## 3. Data Entity Model (ER)
 ```mermaid
 erDiagram
-    ITEM ||--o{ ARTIFACT : содержит
-    ITEM ||--|| TYPE : имеет
-    ITEM ||--|| OBJECT : принадлежит
-    ITEM ||--o| ITEM : ссылается (generator)
-    ITEM ||--o| SCHEMA : проверяется по
-    TEMPLATE ||--|| ITEM : является ITEM
-    PROJECT ||--|| ITEM : является ITEM
-    SCRIPT ||--|| ITEM : является ITEM
+    ITEM ||--o{ ARTIFACT : 'содержит'
+    ITEM ||--|| TYPE : 'имеет'
+    ITEM ||--|| OBJECT : 'принадлежит'
+    ITEM ||--o| ITEM : 'ссылается generator'
+    ITEM ||--o| SCHEMA : 'проверяется по'
+    TEMPLATE ||--|| ITEM : 'является ITEM'
+    PROJECT ||--|| ITEM : 'является ITEM'
+    SCRIPT ||--|| ITEM : 'является ITEM'
 ```
 
 ## 4. Data Flow Platform (DFD)
@@ -63,7 +63,7 @@ flowchart TD
 ## 5. Application Components (ArchiMate)
 ```mermaid
 flowchart TB
-    API[API Gateway (FastAPI)] --> Core
+    API[API Gateway FastAPI] --> Core
     Core --> Generator
     Core --> Validator
     Core --> Builder
