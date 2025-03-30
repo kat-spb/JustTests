@@ -169,12 +169,12 @@ flowchart TD
 ## 9. Traceability Matrix (TOGAF)
 ```mermaid
 graph TD
-    goalA[Скорость вывода решений] --> Q1[/query]
-    goalB[Валидность решений] --> validate[/validate]
-    goalC[Автоматизация] --> build[/build]
-    goalD[Тестируемость] --> test[/test]
-    goalE[Интерпретируемость] --> explain[/explain]
-    goalF[Портируемость] --> deploy[/deploy]
+    goalA["Скорость вывода решений"] --> Q1[/query]
+    goalB["Валидность решений"] --> validate[/validate]
+    goalC["Автоматизация"] --> build[/build]
+    goalD["Тестируемость"] --> test[/test]
+    goalE["Интерпретируемость"] --> explain[/explain]
+    goalF["Портируемость"] --> deploy[/deploy]
 ```
 
 ## 10. Roadmap Phases (ArchiMate)
