@@ -141,10 +141,10 @@ graph LR
     end
 
     subgraph Storage
-        Workspace
-        Uploads
-        Downloads
-        Storage
+        workspace
+        uploads
+        downloads
+        storage
     end
 
     FastAPI --> Docker
