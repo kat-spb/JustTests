@@ -1,0 +1,1 @@
+platform_model_overview_ru_v6.md
