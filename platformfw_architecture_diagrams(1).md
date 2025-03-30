@@ -30,14 +30,14 @@ graph TD
 ## 3. Data Entity Model (ER)
 ```mermaid
 erDiagram
-    ITEM ||--o{ ARTIFACT : [содержит]
-    ITEM ||--|| TYPE : [имеет]
-    ITEM ||--|| OBJECT : [принадлежит]
-    ITEM ||--o| ITEM : [ссылается generator]
-    ITEM ||--o| SCHEMA : [проверяется по]
-    TEMPLATE ||--|| ITEM : [является ITEM]
-    PROJECT ||--|| ITEM : [является ITEM]
-    SCRIPT ||--|| ITEM : [является ITEM]
+    ITEM ||--o{ ARTIFACT : "содержит"
+    ITEM ||--|| TYPE : "имеет"
+    ITEM ||--|| OBJECT : "принадлежит"
+    ITEM ||--o| ITEM : "ссылается generator"
+    ITEM ||--o| SCHEMA : "проверяется по"
+    TEMPLATE ||--|| ITEM : "является ITEM"
+    PROJECT ||--|| ITEM : "является ITEM"
+    SCRIPT ||--|| ITEM : "является ITEM"
 ```
 
 ## 4. Data Flow Platform (DFD)
@@ -130,7 +130,7 @@ graph LR
         Slurm
     end
 
-    subgraph CI/CD
+    subgraph CI\/CD
         GitlabCI
         Jenkins
     end
@@ -170,11 +170,11 @@ flowchart TD
 ```mermaid
 graph TD
     goalA["Скорость вывода решений"] --> Q1[/query]
-    goalB["Валидность решений"] --> validate[/validate]
-    goalC["Автоматизация"] --> build[/build]
-    goalD["Тестируемость"] --> test[/test]
-    goalE["Интерпретируемость"] --> explain[/explain]
-    goalF["Портируемость"] --> deploy[/deploy]
+    goalB["Валидность решений"] --> _validate[/validate]
+    goalC["Автоматизация"] --> _build[/build]
+    goalD["Тестируемость"] --> _test[/test]
+    goalE["Интерпретируемость"] --> _explain[/explain]
+    goalF["Портируемость"] --> _deploy[/deploy]
 ```
 
 ## 10. Roadmap Phases (ArchiMate)
