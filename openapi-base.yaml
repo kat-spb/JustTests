@@ -1,0 +1,80 @@
+openapi: 3.0.3
+info:
+  title: PlatformFW API
+  version: 5.1.0
+  description: Унифицированный API платформы генерации и сборки проектов
+servers:
+  - url: http://localhost:8000
+components:
+  schemas:
+    EntityId:
+      type: string
+    TemplateId:
+      type: string
+    BuildRequest:
+      type: object
+      properties:
+        entity_id: { $ref: '#/components/schemas/EntityId' }
+        type: { type: string }
+        resource_id: { type: string }
+    DeployRequest:
+      type: object
+      properties:
+        artifact: { type: string }
+        resource_id: { type: string }
+    DocFormat:
+      type: string
+      enum: [markdown, html, pdf]
+  parameters:
+    type:
+      name: type
+      in: query
+      required: true
+      schema: { type: string }
+    filter:
+      name: filter
+      in: query
+      schema: { type: string }
+    id:
+      name: id
+      in: path
+      required: true
+      schema: { type: string }
+  responses:
+    200:
+      description: OK
+    400:
+      description: Неверный запрос
+    404:
+      description: Не найдено
+paths:
+  /server_version:
+    get:
+      summary: Версия сервера
+      responses:
+        '200': { $ref: '#/components/responses/200' }
+  /alive:
+    get:
+      summary: Проверка доступности
+      responses:
+        '200': { $ref: '#/components/responses/200' }
+  /kb/dump:
+    post:
+      summary: Сохранение базы знаний
+      responses:
+        '200': { $ref: '#/components/responses/200' }
+  /kb/restore:
+    post:
+      summary: Восстановление базы знаний
+      responses:
+        '200': { $ref: '#/components/responses/200' }
+  /config/bus:
+    get:
+      summary: Конфигурация шины
+      responses:
+        '200': { $ref: '#/components/responses/200' }
+  /config/kb:
+    get:
+      summary: Конфигурация базы знаний
+      responses:
+        '200': { $ref: '#/components/responses/200' }

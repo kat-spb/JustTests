@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: PlatformFW Process API
+  version: 5.1.0
+  description: Процессные методы платформы
+paths:
+  /init:
+    post:
+      summary: Инициализация сущности
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /build:
+    post:
+      summary: Сборка сущности
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /ci/setup:
+    post:
+      summary: Настройка CI/CD
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /ci/run:
+    post:
+      summary: Запуск CI/CD
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /deploy:
+    post:
+      summary: Деплой артефакта
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /validate/schema:
+    post:
+      summary: Проверка структуры
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /validate/logic:
+    post:
+      summary: Проверка логики
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /test/unit:
+    post:
+      summary: Модульные тесты
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /test/integration:
+    post:
+      summary: Интеграционные тесты
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /doc/generate:
+    post:
+      summary: Генерация документации
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }

@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: PlatformFW Entity API
+  version: 5.1.0
+  description: Методы работы с сущностями платформы
+paths:
+  /select:
+    get:
+      summary: Универсальный выбор по типу и фильтру
+      parameters:
+        - $ref: './openapi-base.yaml#/components/parameters/type'
+        - $ref: './openapi-base.yaml#/components/parameters/filter'
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /health/{type}:
+    get:
+      summary: Проверка доступности сущности
+      parameters:
+        - $ref: './openapi-base.yaml#/components/parameters/type'
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /validate/{type}:
+    post:
+      summary: Валидация сущности по типу
+      parameters:
+        - $ref: './openapi-base.yaml#/components/parameters/type'
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /import/{type}:
+    post:
+      summary: Импорт сущности
+      parameters:
+        - $ref: './openapi-base.yaml#/components/parameters/type'
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /export/{type}:
+    get:
+      summary: Экспорт сущности
+      parameters:
+        - $ref: './openapi-base.yaml#/components/parameters/type'
+      responses:
+        '200': { $ref: './openapi-base.yaml#/components/responses/200' }
+
+  /objects:
+    get: { summary: Список категорий, responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+    post: { summary: Создание категории, responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+
+  /objects/{id}:
+    put: { summary: Обновление категории, parameters: [ { $ref: './openapi-base.yaml#/components/parameters/id' } ], responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+    delete: { summary: Удаление категории, parameters: [ { $ref: './openapi-base.yaml#/components/parameters/id' } ], responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+
+  /items:
+    get: { summary: Получить элементы, responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+    post: { summary: Создать элемент, responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+
+  /items/{id}:
+    put: { summary: Обновить элемент, parameters: [ { $ref: './openapi-base.yaml#/components/parameters/id' } ], responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+    delete: { summary: Удалить элемент, parameters: [ { $ref: './openapi-base.yaml#/components/parameters/id' } ], responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+
+  /types:
+    get: { summary: Получить типы, responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+    post: { summary: Добавить тип, responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
+
+  /types/{name}:
+    delete: { summary: Удалить тип, parameters: [ { name: name, in: path, required: true, schema: { type: string } } ], responses: { '200': { $ref: './openapi-base.yaml#/components/responses/200' } } }
