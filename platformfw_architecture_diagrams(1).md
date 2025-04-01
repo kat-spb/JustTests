@@ -76,6 +76,7 @@ flowchart TB
 
 
 ## 6. Component Details (UML)
+Архитектурно-значимые классы и операции (?)
 ```mermaid
 classDiagram
     class API {
@@ -115,7 +116,7 @@ classDiagram
     API --> Deployer
 ```
 
-## 7. Technology Stack (ArchiMate)
+## 7. Technology Stack (ArchiMate)erate_docs()
 ```mermaid
 graph LR
     subgraph Backend
