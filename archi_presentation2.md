@@ -68,8 +68,8 @@ graph TD
     Integration[Integration Layer]
     REST[REST]
     WS[WebSocket]
-    MQTT[MQTT]
-    Event_BUS[RabbitMQ or other]
+    MQTT[Data bus]
+    AMQP[Event bus]
 
     Core --> Auth
     Core --> ConfigMgmt
