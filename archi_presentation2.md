@@ -64,8 +64,10 @@ graph TD
     FeatureStore[Feature Store]
 
     Integration[Integration Layer]
-    REST[REST/MQTT]
-    RabbitMQ[RabbitMQ/Event Bus]
+    REST[REST]
+    WS[WebSocket]
+    MQTT[MQTT]
+    Event_BUS[RabbitMQ or other]
 
     Core --> Auth
     Core --> ConfigMgmt
@@ -76,8 +78,8 @@ graph TD
     DataMgmt --> Datasets
     DataMgmt --> FeatureStore
 
-    Integration --> REST / WS
-    Integration --> MQTT / AMQP
+    Integration --> REST_WS
+    Integration --> MQTT_AMQP
 ```
 ## 4. Диаграмма потоков данных
 **Показывает путь данных от загрузки до инференса.**
