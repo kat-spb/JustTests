@@ -78,8 +78,10 @@ graph TD
     DataMgmt --> Datasets
     DataMgmt --> FeatureStore
 
-    Integration --> REST_WS
-    Integration --> MQTT_AMQP
+    Integration --> REST
+    Integration --> WS
+    Integration --> MQTT
+    Integration --> AMQP
 ```
 ## 4. Диаграмма потоков данных
 **Показывает путь данных от загрузки до инференса.**
@@ -111,14 +113,14 @@ graph TD
     S3[AWS S3]
     AzureML[Azure ML]
 
-    Kubernetes --> GPU
-    Kubernetes --> DB
+    Orchestration --> GPU
+    Orchestration --> DB
     DB --> PostgreSQL
     DB --> VectorDB
 
     Cloud --> S3
     Cloud --> AzureML
-    Kubernetes --> Cloud
+    Orchestration --> Cloud
 ```
 ## 6. Sequence-диаграммы
 ### a. Создание нового AI-сервиса
