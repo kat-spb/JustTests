@@ -105,24 +105,37 @@ graph LR
 **Физическая и облачная инфраструктура.**
 ```mermaid
 graph TD
-    Kubernetes[Kubernetes-кластеры]
-    GPU[GPU-ноды]
+    Orchestration[Управление ресурсами]
+    CPU[Baremetal]
+    GPU[Baremetal c GPU]
+    VM[Виртуальные машины]
     DB[Базы данных]
+    LocalS3[Local S3]
     PostgreSQL[PostgreSQL]
-    VectorDB[Vector DB]
+    VectorDB[TimeseriesDB]
+    Slurm[Очереди ресурсов]
 
-    Cloud[AWS / Azure]
-    S3[AWS S3]
-    AzureML[Azure ML]
+    Cloud[YandexCloud / Selectel]
+    S3[YandexCloud S3]
+    YandexML[Yandex ML]
 
-    Orchestration --> GPU
-    Orchestration --> DB
+    GPU --> Slurm
+
+    Local --> Device
+    Local --> CPU
+    Local --> GPU
+    Local --> VM
+    Local --> DB
+    Local --> LocalS3
+    Orchestration --> Local
+
     DB --> PostgreSQL
     DB --> VectorDB
 
     Cloud --> S3
-    Cloud --> AzureML
+    Cloud --> YandexML
     Orchestration --> Cloud
+
 ```
 ## 6. Sequence-диаграммы
 ### a. Создание нового AI-сервиса
