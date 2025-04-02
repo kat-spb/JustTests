@@ -21,6 +21,8 @@ graph TD
 
     Users -->|взаимодействие| Platform
     Devs --> Platform
+    ExternalServices --> Platform
+    Integration --> Platform
 
     Platform --> MLModels
     Platform --> Datasets
